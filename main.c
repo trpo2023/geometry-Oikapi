@@ -149,10 +149,9 @@ int main() {
             printf("%s %s %s \n", circle[i].name_x1, circle[i].x2_check, circle[i].x3_check);
             printf("   perimetr = %.3lf\n", r * 2 * 3.14);
             printf("   area = %.3lf\n", r * r * 3.14);
+            //hello
         }
-        // hello
-        // hello
-        // hello
         i++;
+        //hello 12 1
     }
 }
