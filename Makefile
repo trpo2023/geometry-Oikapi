@@ -1,5 +1,5 @@
-main: main.o
- gcc main.o -o main -Wall -Werror
-main.o: main.c
- gcc -c main.c
-
+all:
+	gcc -o main main.c
+	./main
+clean:
+	rm -f main
