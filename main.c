@@ -150,6 +150,7 @@ int main() {
             printf("   perimetr = %.3lf\n", r * 2 * 3.14);
             printf("   area = %.3lf\n", r * r * 3.14);
             //hello
+            //hello
         }
         i++;
         //hello 12 1
