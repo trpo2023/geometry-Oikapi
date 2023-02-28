@@ -67,7 +67,6 @@ int check_name(struct figure main_check_circle) {
     char check_name[] = "circle(";
     for (int i = 1; i <= strlen(check_name); i++) {
         if (strncmp(check_name, main_check_circle.name_x1, i) != 0) {
-            //            printf("%d ",i);
             if (i == 7) {
                 main_error = 4;
             } else {
@@ -84,7 +83,6 @@ void print_error(struct figure main_check_circle, int pointer) {
     printf("%s ", main_check_circle.name_x1);
     printf("%s ", main_check_circle.x2_check);
     printf("%s ", main_check_circle.x3_check);
-    //    if (main_error == 8) printf("%s", main_check_circle.loss_check);
     printf("\n");
     for (int i = 0; i < pointer; i++) {
         printf(" ");
@@ -117,8 +115,6 @@ double mainCheck(struct figure main_check_circle) {
     strcpy(x1, main_check_circle.name_x1 + strlen(main_check_circle.name_x1) - length_name_x1 + length_name);
     strncpy(x2, main_check_circle.x2_check, strlen(main_check_circle.x2_check) - 1);
     strncpy(x3, main_check_circle.x3_check, check_real_lenght(main_check_circle) - 1);
-    //    printf("%s\n",main_check_circle.x3_check);
-    //    printf("%s\n%s\n\n",x1,main_check_circle.name_x1);
     pointer = check_x(x1, strlen(x1)) + strlen(check_name) - 1;
     if (check_x(x1, strlen(x1)) != 0) {
         print_error(main_check_circle, pointer);
