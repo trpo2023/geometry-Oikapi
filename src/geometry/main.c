@@ -1,11 +1,12 @@
-#include "../libgeometry/geom_parser.h"
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
+#include "../libgeometry/geom_parser.h"
 
-int main() {
-    FILE *file;
+int main()
+{
+    FILE* file;
     struct Figure circle[10];
     struct Int_figure int_circle[10];
     int i = 0;
@@ -15,7 +16,7 @@ int main() {
     double r;
     while (fgets(str, 100, file) != NULL) {
         pointer = 0;
-        char *token = strtok(str, " ");
+        char* token = strtok(str, " ");
         strcpy(circle[i].figure_firstx, token);
         strcpy(circle[i].secondx, strtok(NULL, " "));
         strcpy(circle[i].thirdx, strtok(NULL, "\n"));
@@ -23,7 +24,10 @@ int main() {
         if (error == 0) {
             load_x(&int_circle[i], circle[i]);
             r = int_circle[i].radius;
-            printf("%s %s %s \n", circle[i].figure_firstx, circle[i].secondx, circle[i].thirdx);
+            printf("%s %s %s \n",
+                   circle[i].figure_firstx,
+                   circle[i].secondx,
+                   circle[i].thirdx);
             printf("   perimetr = %.3lf\n", r * 2 * M_PI);
             printf("   area = %.3lf\n", r * r * M_PI);
             i++;

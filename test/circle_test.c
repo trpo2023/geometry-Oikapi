@@ -7,7 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-CTEST(FIND_INTERSECTION, isIntersection) {
+CTEST(FIND_INTERSECTION, isIntersection)
+{
     struct Int_figure One_in_other[2];
     One_in_other[0].x1 = 10;
     One_in_other[0].x2 = 10;
@@ -42,12 +43,17 @@ CTEST(FIND_INTERSECTION, isIntersection) {
     ASSERT_EQUAL(c, 0);
 }
 
-CTEST(FIND_INVALID_INPUT, mainCheck) {
+CTEST(FIND_INVALID_INPUT, mainCheck)
+{
     int pointer;
     struct Figure circle[4];
-    char exampls[4][25] = {"circle(10.4 10, 10)", "crcle(10.3 10.6, 10)", "circle(10 10, 10", "circle(10 aa, 10)"};
+    char exampls[4][25]
+            = {"circle(10.4 10, 10)",
+               "crcle(10.3 10.6, 10)",
+               "circle(10 10, 10",
+               "circle(10 aa, 10)"};
     for (int i = 0; i < 4; i++) {
-        char *token = strtok(exampls[i], " ");
+        char* token = strtok(exampls[i], " ");
         strcpy(circle[i].figure_firstx, token);
         strcpy(circle[i].secondx, strtok(NULL, " "));
         strcpy(circle[i].thirdx, strtok(NULL, " "));
